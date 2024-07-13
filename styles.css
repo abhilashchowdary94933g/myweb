@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    flex: 1;
+}
+
+header nav ul li a {
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+header nav ul li a:hover {
+    background-color: #575757;
+}
+
+header nav ul li img {
+    height: 24px;
+    width: 24px;
+}
+
+#main-content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #575757;
+}
+
+.blinking {
+    font-size: 32px;
+    animation: blinkingText 1.2s infinite;
+}
+
+@keyframes blinkingText {
+    0% { color: #000; }
+    50% { color: #f00; }
+    100% { color: #000; }
+}
