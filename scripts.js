@@ -25,8 +25,3 @@ function updateCart() {
 
     cartTotal.textContent = total; // Display total price
 }
-
-// Example usage of addToCart function (You can remove this in production)
-addToCart('Chicken Biryani', 10);
-addToCart('Veg Biryani', 8);
-addToCart('Chilli Chicken', 5);
