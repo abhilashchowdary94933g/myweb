@@ -2,8 +2,8 @@
 function signUp() {
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
 
     if (password !== confirmPassword) {
@@ -23,33 +23,36 @@ function login() {
 
     if (user && user.email === email && user.password === password) {
         alert('Login successful!');
-        window.location.href = 'home.html';
+        window.location.href = 'home.html'; // Redirect to home page after successful login
     } else {
         alert('Invalid email or password.');
     }
 }
 
 // Handle cart operations
-let cart = [];
+let cart = []; // Initialize an empty array to store cart items
 
+// Function to add item to cart
 function addToCart(item, price) {
-    cart.push({ item, price });
+    cart.push({ item, price }); // Push item object into cart array
     alert(`${item} added to cart.`);
-    updateCart();
+    updateCart(); // Update cart display
 }
 
+// Function to update cart display
 function updateCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
-    cartItems.innerHTML = '';
+    cartItems.innerHTML = ''; // Clear previous items in cart display
     let total = 0;
 
+    // Loop through each item in cart array
     cart.forEach(cartItem => {
         const li = document.createElement('li');
         li.textContent = `${cartItem.item} - $${cartItem.price}`;
         cartItems.appendChild(li);
-        total += cartItem.price;
+        total += cartItem.price; // Accumulate total price
     });
 
-    cartTotal.textContent = total;
+    cartTotal.textContent = total; // Display total price
 }
